@@ -1,0 +1,354 @@
+/* =========================================================
+   common.css : 모든 페이지 공통 (색상 · 글꼴 · 머리말 · 메뉴 · 꼬리말)
+   ※ 색은 아래 :root 에 이름을 붙여 저장하고, 모든 CSS 파일은 이름(var)으로만 사용합니다.
+   ========================================================= */
+
+:root {
+  /* ----- 대표 색상 ----- */
+  --color-bg: #f7f3ec;            /* 페이지 바탕 (아이보리) */
+  --color-surface: #ffffff;       /* 카드·머리말 바탕 */
+  --color-surface-alt: #efe8db;   /* 이미지 자리·보조 바탕 */
+  --color-ink: #1f1a17;           /* 제목 글자 */
+  --color-text: #4a423b;          /* 본문 글자 */
+  --color-muted: #6f655b;         /* 보조 글자 */
+  --color-border: #e3dacb;        /* 테두리 */
+  --color-accent: #9c7b45;        /* 포인트 (브라스 골드) */
+  --color-accent-dark: #7a5f2e;   /* 포인트 글자용 */
+  --color-accent-light: #d4b676;  /* 어두운 바탕 위 포인트 */
+  --color-dark: #26201c;          /* 어두운 바탕 / 기본 버튼 */
+  --color-on-dark: #f7f3ec;       /* 어두운 바탕 위 글자 */
+  --color-on-dark-muted: #cfc5b6; /* 어두운 바탕 위 보조 글자 */
+  --color-overlay: rgba(24, 18, 14, 0.5);
+  --color-overlay-strong: rgba(24, 18, 14, 0.78);
+  --color-shadow: rgba(40, 30, 20, 0.14);
+
+  /* ----- 향 계열 포인트 색 ----- */
+  --color-note-citrus: #d2a63c;
+  --color-note-floral: #c4808d;
+  --color-note-woody: #8a6a4b;
+  --color-note-amber: #b5742f;
+  --color-note-aquatic: #6f9fb0;
+  --color-note-green: #7d9a6a;
+  --color-note-spicy: #b4532f;
+  --color-note-musk: #a39d94;
+  --color-note-gourmand: #c18a5a;
+  --color-note-leather: #6b4a3a;
+
+  /* ----- 글꼴 ----- */
+  --font-serif: "Noto Serif KR", "Nanum Myeongjo", "Batang", serif;
+  --font-sans: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-display: "Cormorant Garamond", "Noto Serif KR", serif;
+
+  /* ----- 크기 ----- */
+  --header-h: 64px;
+  --gutter: 20px;
+  --container: 1120px;
+  --radius: 4px;
+}
+
+@media (min-width: 768px) {
+  :root { --header-h: 76px; --gutter: 32px; }
+}
+@media (min-width: 1024px) {
+  :root { --gutter: 40px; }
+}
+
+/* ---------- 기본 설정 ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  background: var(--color-bg);
+  word-break: keep-all;
+}
+
+main { flex: 1; }
+
+img, video { display: block; max-width: 100%; height: auto; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p, figure, dl, dd, address { margin: 0; }
+address { font-style: normal; }
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; }
+}
+
+/* ---------- 공통 유틸 ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--color-dark);
+  color: var(--color-on-dark);
+}
+.skip-link:focus { top: 12px; }
+
+/* ---------- 머리말 + 메뉴 (위에 고정) ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--color-ink);
+}
+
+/* 체크박스는 화면에서 숨기고 키보드로만 접근 */
+.menu-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-ink);
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+.hamburger-btn::before { content: "☰"; }
+.menu-toggle:checked + .hamburger-btn::before { content: "✕"; }
+.menu-toggle:focus-visible + .hamburger-btn {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* 휴대폰: 접혀 있다가 ☰ 누르면 세로로 펼쳐짐 */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 16px 24px var(--color-shadow);
+}
+.menu-toggle:checked ~ .nav-menu { display: block; }
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4px var(--gutter) 16px;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-border);
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 2px;
+  transition: background-size 0.3s ease, color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--color-accent-dark);
+  background-size: 100% 2px;
+}
+
+/* 태블릿 · PC: 메뉴 5개가 가로로 */
+@media (min-width: 768px) {
+  .hamburger-btn { display: none; }
+
+  .nav-menu {
+    display: block;
+    position: static;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  .nav-list {
+    flex-direction: row;
+    gap: 28px;
+    padding: 0;
+  }
+  .nav-link {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border-bottom: 0;
+  }
+  .logo { font-size: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .nav-list { gap: 40px; }
+}
+
+/* ---------- 구역 · 제목 ---------- */
+.section { padding: 56px 0; }
+.section-alt { background: var(--color-surface); }
+
+.section-head,
+.page-head {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+.page-head { padding-top: 48px; margin-bottom: 8px; }
+
+.eyebrow {
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+
+.page-title { font-size: 1.75rem; }
+.section-title { font-size: 1.5rem; }
+.section-desc,
+.page-desc {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .section { padding: 80px 0; }
+  .page-head { padding-top: 72px; }
+  .page-title { font-size: 2.25rem; }
+  .section-title { font-size: 1.85rem; }
+  .section-head { margin-bottom: 44px; }
+}
+@media (min-width: 1024px) {
+  .section { padding: 96px 0; }
+  .page-title { font-size: 2.5rem; }
+  .section-title { font-size: 2rem; }
+}
+
+/* ---------- 버튼 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 0 30px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-block { width: 100%; }
+
+.btn-primary { background: var(--color-dark); color: var(--color-on-dark); }
+.btn-primary:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); }
+
+.btn-outline { background: none; color: var(--color-ink); }
+.btn-outline:hover { background: var(--color-dark); color: var(--color-on-dark); }
+
+.btn-gold {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent-light);
+  color: var(--color-dark);
+}
+.btn-gold:hover { background: var(--color-on-dark); border-color: var(--color-on-dark); }
+
+.btn-light { background: none; border-color: var(--color-on-dark); color: var(--color-on-dark); }
+.btn-light:hover { background: var(--color-on-dark); color: var(--color-dark); }
+
+/* ---------- 카드 (공통 모양) ---------- */
+.card {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px var(--color-shadow);
+}
+
+/* ---------- 꼬리말 ---------- */
+.site-footer {
+  padding: 44px 0;
+  font-size: 0.875rem;
+  line-height: 1.9;
+  text-align: center;
+  color: var(--color-on-dark-muted);
+  background: var(--color-dark);
+}
+.footer-brand {
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--color-on-dark);
+}
+.copyright { margin-top: 16px; font-size: 0.8rem; }

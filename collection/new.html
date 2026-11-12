@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="이번 주 새롭게 입고된 신상품 향수 모음">
+  <title>신상품 | PERFUMERY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <!-- 1. 공통 꾸밈 -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- 2. 이 페이지 꾸밈 -->
+  <link rel="stylesheet" href="../css/collection.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="../index.html" aria-label="PERFUMERY 홈으로">PERFUMERY</a>
+
+      <!-- 휴대폰 ☰ 버튼 : 체크박스 + label (자바스크립트 없이 동작) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="메뉴 열고 닫기">
+      <label for="menu-toggle" class="hamburger-btn" aria-hidden="true"></label>
+
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">홈</a></li>
+          <li><a class="nav-link" href="../menu.html" aria-current="page">컬렉션</a></li>
+          <li><a class="nav-link" href="../about.html">브랜드·시향</a></li>
+          <li><a class="nav-link" href="../location.html">오시는 길</a></li>
+          <li><a class="nav-link" href="../contact.html">시향·문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="newpage-title">
+      <div class="container">
+        <p class="back-link"><a href="../index.html">← 홈으로 돌아가기</a></p>
+        <div class="page-head">
+          <p class="eyebrow">New Arrivals</p>
+          <h1 class="page-title" id="newpage-title">이번 주 신상품</h1>
+          <p class="page-desc">새롭게 입고된 센슈얼한 향수를 지금 만나보세요.</p>
+        </div>
+
+        <ul class="product-grid">
+        <li id="new-1">
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/woody_1.jpg" alt="TOM FORD 오드 우드 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">TOM FORD</p>
+              <h2 class="product-name">오드 우드<span class="product-en">Oud Wood</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>오드 · 샌달우드 · 로즈우드 · 카다멈</dd>
+              </dl>
+              <p class="product-desc">깊고 따뜻한 오드 우드에 샌달우드와 향신료가 더해진 향이에요. 고급스럽고 묵직한 나무 향이 특징이에요.</p>
+              <p class="product-tag">Woody</p>
+            </div>
+          </article>
+        </li>
+        <li id="new-2">
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/floral_1.jpg" alt="CHANEL 샤넬 N°5 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">CHANEL</p>
+              <h2 class="product-name">샤넬 N°5<span class="product-en">N°5</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>알데하이드 · 일랑일랑 · 로즈 · 자스민</dd>
+              </dl>
+              <p class="product-desc">세계에서 가장 유명한 플로럴 향수예요. 반짝이는 알데하이드 위로 꽃다발이 풍성하게 피어나는 우아한 향이에요.</p>
+              <p class="product-tag">Floral</p>
+            </div>
+          </article>
+        </li>
+        <li id="new-3">
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/citrus_1.jpg" alt="JO MALONE LONDON 라임 바질 앤 만다린 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">JO MALONE LONDON</p>
+              <h2 class="product-name">라임 바질 앤 만다린<span class="product-en">Lime Basil & Mandarin</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>라임 · 바질 · 만다린</dd>
+              </dl>
+              <p class="product-desc">톡 쏘는 라임과 향긋한 바질이 어우러진 조말론의 대표 시트러스예요. 상큼하면서도 허브의 개성이 느껴져요.</p>
+              <p class="product-tag">Citrus</p>
+            </div>
+          </article>
+        </li>
+        <li id="new-4">
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/aquatic_1.jpg" alt="DAVIDOFF 쿨 워터 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">DAVIDOFF</p>
+              <h2 class="product-name">쿨 워터<span class="product-en">Cool Water</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>민트 · 라벤더 · 마린 노트</dd>
+              </dl>
+              <p class="product-desc">시원한 바닷바람을 담은 아쿠아틱의 대표작이에요. 청량하고 깨끗한 향이에요.</p>
+              <p class="product-tag">Aquatic</p>
+            </div>
+          </article>
+        </li>
+        <li id="new-5">
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/green_1.jpg" alt="BVLGARI 오 빠르퓨메 오 떼 베르 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">BVLGARI</p>
+              <h2 class="product-name">오 빠르퓨메 오 떼 베르<span class="product-en">Eau Parfumée au Thé Vert</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>녹차 · 베르가못 · 카다멈 · 자스민</dd>
+              </dl>
+              <p class="product-desc">차 향수의 시작으로 불리는 작품이에요. 맑고 차분한 찻잎 향이 편안한 느낌을 줘요.</p>
+              <p class="product-tag">Green</p>
+            </div>
+          </article>
+        </li>
+        <li id="new-6">
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/leather_1.jpg" alt="TOM FORD 터스칸 레더 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">TOM FORD</p>
+              <h2 class="product-name">터스칸 레더<span class="product-en">Tuscan Leather</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>라즈베리 · 사프란 · 가죽 · 스웨이드</dd>
+              </dl>
+              <p class="product-desc">달콤한 라즈베리와 사프란으로 시작해 부드럽고 묵직한 가죽 향으로 이어져요.</p>
+              <p class="product-tag">Leather</p>
+            </div>
+          </article>
+        </li>
+        </ul>
+
+        <p class="source-note">※ 대표 노트는 브랜드 정보를 간추린 것이며, 제품 리뉴얼이나 버전에 따라 다를 수 있습니다.</p>
+        <p class="more-link"><a class="btn btn-outline" href="../menu.html">전체 컬렉션 보기</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">PERFUMERY</p>
+      <address>
+        대구광역시 동구 신서동<br>
+        고객센터 1588-0000 · 오전 9시 10분 ~ 오후 4시 40분
+      </address>
+      <p class="copyright">© 2026 Perfume Curation Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

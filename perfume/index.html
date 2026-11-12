@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="10가지 향 계열로 취향을 찾고 14일 시향 키트로 먼저 체험하는 퍼퓸 큐레이션 플랫폼">
+  <title>홈 | PERFUMERY 퍼퓸 큐레이션</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <!-- 1. 공통 꾸밈 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 2. 이 페이지 꾸밈 -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="index.html" aria-label="PERFUMERY 홈으로">PERFUMERY</a>
+
+      <!-- 휴대폰 ☰ 버튼 : 체크박스 + label (자바스크립트 없이 동작) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="메뉴 열고 닫기">
+      <label for="menu-toggle" class="hamburger-btn" aria-hidden="true"></label>
+
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html" aria-current="page">홈</a></li>
+          <li><a class="nav-link" href="menu.html">컬렉션</a></li>
+          <li><a class="nav-link" href="about.html">브랜드·시향</a></li>
+          <li><a class="nav-link" href="location.html">오시는 길</a></li>
+          <li><a class="nav-link" href="contact.html">시향·문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. 첫인상 (히어로) : 영상 + 사진 슬라이드 -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <!-- 영상이 없을 때도 사진이 자동으로 바뀝니다 -->
+        <img class="hero-slide" src="images/hero_01.jpg" alt="은은한 조명 아래 놓인 호박빛 향수병">
+        <img class="hero-slide" src="images/hero_02.jpg" alt="붉은 꽃 곁에 놓인 검은 향수병">
+        <img class="hero-slide" src="images/hero_03.jpg" alt="흰 질감 위에 놓인 황금빛 향수병">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+          <source src="images/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Perfume Curation</p>
+          <h1 class="hero-title" id="hero-title">나에게 어울리는 향,<br>가장 쉽게 찾아드립니다</h1>
+          <p class="hero-text">어려운 향수 용어 없이 10가지 향 계열로 취향을 찾고, 14일 시향 키트로 집에서 직접 경험해 보세요.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="contact.html">14일 시향 키트 신청</a>
+            <a class="btn btn-light" href="menu.html">컬렉션 보기</a>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#notes-section">Scroll to explore</a>
+    </section>
+
+    <!-- 2. 핵심 정보 -->
+    <section class="info-strip" aria-label="매장 핵심 정보">
+      <div class="container">
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="info-label">Hours</span>
+            <span class="info-value">오전 9시 10분 ~ 오후 4시 40분</span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Location</span>
+            <a class="info-value" href="location.html">대구광역시 동구 신서동 · 오시는 길</a>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Sample Kit</span>
+            <span class="info-value">시향 키트 금액 100% 환급</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="notes-section" aria-labelledby="notes-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Find Your Note</p>
+          <h2 class="section-title" id="notes-title">취향별 향수 찾기</h2>
+          <p class="section-desc">대표적인 10가지 향 계열 중 원하는 분위기를 선택해 보세요.</p>
+        </div>
+        <ul class="note-grid">
+          <li>
+            <a class="card note-card note-citrus" href="collection/citrus.html">
+              <span class="note-en">Citrus</span>
+              <h3 class="note-name">시트러스</h3>
+              <p class="note-desc">상큼하고 청량한 감귤 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-floral" href="collection/floral.html">
+              <span class="note-en">Floral</span>
+              <h3 class="note-name">플로럴</h3>
+              <p class="note-desc">화사하고 우아한 꽃향기</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-woody" href="collection/woody.html">
+              <span class="note-en">Woody</span>
+              <h3 class="note-name">우디</h3>
+              <p class="note-desc">차분하고 포근한 나무 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-amber" href="collection/amber.html">
+              <span class="note-en">Amber</span>
+              <h3 class="note-name">앰버</h3>
+              <p class="note-desc">따뜻하고 깊은 호박빛 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-aquatic" href="collection/aquatic.html">
+              <span class="note-en">Aquatic</span>
+              <h3 class="note-name">아쿠아틱</h3>
+              <p class="note-desc">시원한 바다와 물의 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-green" href="collection/green.html">
+              <span class="note-en">Green</span>
+              <h3 class="note-name">그린</h3>
+              <p class="note-desc">싱그러운 풀잎과 허브 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-spicy" href="collection/spicy.html">
+              <span class="note-en">Spicy</span>
+              <h3 class="note-name">스파이시</h3>
+              <p class="note-desc">톡 쏘는 따뜻한 향신료 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-musk" href="collection/musk.html">
+              <span class="note-en">Musk</span>
+              <h3 class="note-name">머스크</h3>
+              <p class="note-desc">살결처럼 부드러운 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-gourmand" href="collection/gourmand.html">
+              <span class="note-en">Gourmand</span>
+              <h3 class="note-name">구르망</h3>
+              <p class="note-desc">달콤한 바닐라와 디저트 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+          <li>
+            <a class="card note-card note-leather" href="collection/leather.html">
+              <span class="note-en">Leather</span>
+              <h3 class="note-name">레더</h3>
+              <p class="note-desc">고급스럽고 중후한 가죽 향</p>
+              <span class="note-more">향수 보기 →</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 에디토리얼 : 14일 시향 프로그램 -->
+    <section class="feature" aria-labelledby="feature-title">
+      <figure class="feature-media">
+        <img src="images/feature_01.jpg" alt="황금빛 향수병과 샘플 키트가 놓인 따뜻한 조명의 정물" loading="lazy">
+      </figure>
+      <div class="feature-text">
+        <p class="eyebrow">Sample Program</p>
+        <h2 class="feature-title" id="feature-title">구매 전에,<br>먼저 향을 입어 보세요</h2>
+        <p class="feature-desc">3가지 향을 14일 동안 일상 속에서 경험하세요. 시향 키트 금액은 본품 구매 시 100% 쿠폰으로 돌려드립니다.</p>
+        <a class="btn btn-outline" href="about.html">시향 프로그램 알아보기</a>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="new-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">New Arrivals</p>
+          <h2 class="section-title" id="new-title">이번 주 신상품</h2>
+          <p class="section-desc">새롭게 입고된 센슈얼한 향수를 지금 만나보세요.</p>
+        </div>
+        <ul class="new-grid">
+          <li>
+            <article class="card new-card">
+              <figure class="card-media">
+                <a class="card-media-link" href="collection/new.html#new-1">
+                  <img src="images/woody_1.jpg" alt="TOM FORD 오드 우드 향수 제품 사진" loading="lazy">
+                </a>
+              </figure>
+              <div class="card-body">
+                <p class="card-brand">TOM FORD</p>
+                <h3 class="card-name">오드 우드</h3>
+                <p class="card-desc">오드 · 샌달우드 · 로즈우드 · 카다멈</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card new-card">
+              <figure class="card-media">
+                <a class="card-media-link" href="collection/new.html#new-2">
+                  <img src="images/floral_1.jpg" alt="CHANEL 샤넬 N°5 향수 제품 사진" loading="lazy">
+                </a>
+              </figure>
+              <div class="card-body">
+                <p class="card-brand">CHANEL</p>
+                <h3 class="card-name">샤넬 N°5</h3>
+                <p class="card-desc">알데하이드 · 일랑일랑 · 로즈 · 자스민</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card new-card">
+              <figure class="card-media">
+                <a class="card-media-link" href="collection/new.html#new-3">
+                  <img src="images/citrus_1.jpg" alt="JO MALONE LONDON 라임 바질 앤 만다린 향수 제품 사진" loading="lazy">
+                </a>
+              </figure>
+              <div class="card-body">
+                <p class="card-brand">JO MALONE LONDON</p>
+                <h3 class="card-name">라임 바질 앤 만다린</h3>
+                <p class="card-desc">라임 · 바질 · 만다린</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <p class="section-more"><a class="btn btn-outline" href="collection/new.html">신상품 전체 보기</a></p>
+      </div>
+    </section>
+
+    <!-- 서비스 안내 -->
+    <section class="section" aria-labelledby="service-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">At Your Service</p>
+          <h2 class="section-title" id="service-title">PERFUMERY가 드리는 서비스</h2>
+        </div>
+        <ul class="service-grid">
+          <li class="service-item">
+            <span class="service-num">01</span>
+            <h3 class="service-name">향수 컨설팅</h3>
+            <p class="service-text">취향과 분위기에 맞는 향을 함께 골라 드려요.</p>
+          </li>
+          <li class="service-item">
+            <span class="service-num">02</span>
+            <h3 class="service-name">14일 시향 키트</h3>
+            <p class="service-text">3가지 향을 집에서 여유 있게 체험해 보세요.</p>
+          </li>
+          <li class="service-item">
+            <span class="service-num">03</span>
+            <h3 class="service-name">선물 포장</h3>
+            <p class="service-text">소중한 사람을 위한 정성스러운 포장을 해 드려요.</p>
+          </li>
+          <li class="service-item">
+            <span class="service-num">04</span>
+            <h3 class="service-name">쇼룸 방문 예약</h3>
+            <p class="service-text">미리 예약하면 더 편안하게 상담받을 수 있어요.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 행동 유도 (CTA) -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 class="cta-title" id="cta-title">구매 전에, 먼저 향을 입어 보세요</h2>
+        <p class="cta-text">3가지 향을 14일 동안 집에서 체험하고, 시향 키트 금액은 본품 구매 시 전액 돌려드립니다.</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="contact.html">시향 키트 신청하기</a>
+          <a class="btn btn-light" href="location.html">오시는 길</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">PERFUMERY</p>
+      <address>
+        대구광역시 동구 신서동<br>
+        고객센터 1588-0000 · 오전 9시 10분 ~ 오후 4시 40분
+      </address>
+      <p class="copyright">© 2026 Perfume Curation Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

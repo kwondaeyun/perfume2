@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="시트러스(Citrus) 계열 향수 컬렉션 - 상큼하고 청량한 감귤 향">
+  <title>시트러스 향수 | PERFUMERY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <!-- 1. 공통 꾸밈 -->
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- 2. 이 페이지 꾸밈 -->
+  <link rel="stylesheet" href="../css/collection.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="../index.html" aria-label="PERFUMERY 홈으로">PERFUMERY</a>
+
+      <!-- 휴대폰 ☰ 버튼 : 체크박스 + label (자바스크립트 없이 동작) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="메뉴 열고 닫기">
+      <label for="menu-toggle" class="hamburger-btn" aria-hidden="true"></label>
+
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">홈</a></li>
+          <li><a class="nav-link" href="../menu.html" aria-current="page">컬렉션</a></li>
+          <li><a class="nav-link" href="../about.html">브랜드·시향</a></li>
+          <li><a class="nav-link" href="../location.html">오시는 길</a></li>
+          <li><a class="nav-link" href="../contact.html">시향·문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="cat-title">
+      <div class="container">
+        <p class="back-link"><a href="../menu.html">← 컬렉션으로 돌아가기</a></p>
+        <div class="page-head">
+          <p class="eyebrow">Citrus</p>
+          <h1 class="page-title" id="cat-title">시트러스</h1>
+          <p class="page-desc">상큼하고 청량한 감귤 향. 시트러스 계열을 대표하는 향수 3종을 소개합니다.</p>
+        </div>
+
+        <ul class="chip-list">
+          <li><a class="chip" href="citrus.html" aria-current="page">시트러스</a></li>
+          <li><a class="chip" href="floral.html">플로럴</a></li>
+          <li><a class="chip" href="woody.html">우디</a></li>
+          <li><a class="chip" href="amber.html">앰버</a></li>
+          <li><a class="chip" href="aquatic.html">아쿠아틱</a></li>
+          <li><a class="chip" href="green.html">그린</a></li>
+          <li><a class="chip" href="spicy.html">스파이시</a></li>
+          <li><a class="chip" href="musk.html">머스크</a></li>
+          <li><a class="chip" href="gourmand.html">구르망</a></li>
+          <li><a class="chip" href="leather.html">레더</a></li>
+        </ul>
+
+        <ul class="product-grid">
+        <li>
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/citrus_1.jpg" alt="JO MALONE LONDON 라임 바질 앤 만다린 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">JO MALONE LONDON</p>
+              <h2 class="product-name">라임 바질 앤 만다린<span class="product-en">Lime Basil & Mandarin</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>라임 · 바질 · 만다린</dd>
+              </dl>
+              <p class="product-desc">톡 쏘는 라임과 향긋한 바질이 어우러진 조말론의 대표 시트러스예요. 상큼하면서도 허브의 개성이 느껴져요.</p>
+              <p class="product-tag">Citrus</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/citrus_2.jpg" alt="ACQUA DI PARMA 콜로니아 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">ACQUA DI PARMA</p>
+              <h2 class="product-name">콜로니아<span class="product-en">Colonia</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>시트러스 · 라벤더 · 로즈마리</dd>
+              </dl>
+              <p class="product-desc">이탈리아를 대표하는 클래식 오 드 코롱이에요. 밝은 감귤 향 뒤로 라벤더와 허브가 이어져 깔끔하고 세련돼요.</p>
+              <p class="product-tag">Citrus</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card product-card">
+            <figure class="product-media">
+              <img src="../images/citrus_3.jpg" alt="DOLCE & GABBANA 라이트 블루 향수 제품 사진" loading="lazy">
+            </figure>
+            <div class="product-body">
+              <p class="product-brand">DOLCE & GABBANA</p>
+              <h2 class="product-name">라이트 블루<span class="product-en">Light Blue</span></h2>
+              <dl class="product-notes">
+                <dt>대표 노트</dt>
+                <dd>시칠리아 레몬 · 사과 · 시더우드</dd>
+              </dl>
+              <p class="product-desc">지중해의 여름 같은 레몬 향에 풋사과의 산뜻함이 더해져요. 시더우드로 깔끔하게 마무리돼요.</p>
+              <p class="product-tag">Citrus</p>
+            </div>
+          </article>
+        </li>
+        </ul>
+
+        <p class="source-note">※ 대표 노트는 브랜드 정보를 간추린 것이며, 제품 리뉴얼이나 버전에 따라 다를 수 있습니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">PERFUMERY</p>
+      <address>
+        대구광역시 동구 신서동<br>
+        고객센터 1588-0000 · 오전 9시 10분 ~ 오후 4시 40분
+      </address>
+      <p class="copyright">© 2026 Perfume Curation Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

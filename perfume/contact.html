@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="14일 시향 키트 신청과 쇼룸 방문 예약, 향수 상담 문의">
+  <title>시향 신청 · 예약 문의 | PERFUMERY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <!-- 1. 공통 꾸밈 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 2. 이 페이지 꾸밈 -->
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="index.html" aria-label="PERFUMERY 홈으로">PERFUMERY</a>
+
+      <!-- 휴대폰 ☰ 버튼 : 체크박스 + label (자바스크립트 없이 동작) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="메뉴 열고 닫기">
+      <label for="menu-toggle" class="hamburger-btn" aria-hidden="true"></label>
+
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">홈</a></li>
+          <li><a class="nav-link" href="menu.html">컬렉션</a></li>
+          <li><a class="nav-link" href="about.html">브랜드·시향</a></li>
+          <li><a class="nav-link" href="location.html">오시는 길</a></li>
+          <li><a class="nav-link" href="contact.html" aria-current="page">시향·문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="contact-title">
+      <div class="container">
+        <div class="page-head">
+          <p class="eyebrow">Contact</p>
+          <h1 class="page-title" id="contact-title">시향 신청 및 예약 문의</h1>
+          <p class="page-desc">궁금한 점이 있거나 시향 키트 신청을 원하시면 아래 양식을 작성해 주세요.</p>
+        </div>
+
+        <div class="contact-layout">
+          <form class="card form-card" action="#" method="post">
+            <div class="field">
+              <label class="field-label" for="name">성함</label>
+              <input class="field-input" type="text" id="name" name="name" placeholder="홍길동" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="tel">연락처</label>
+              <input class="field-input" type="tel" id="tel" name="tel" placeholder="010-0000-0000" autocomplete="tel" inputmode="tel" required>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="type">문의 유형</label>
+              <select class="field-select" id="type" name="type">
+                <option>14일 시향 키트 신청</option>
+                <option>오프라인 쇼룸 방문 예약</option>
+                <option>향수 추천 상담</option>
+                <option>기타 문의</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="message">문의 내용 및 선호하는 향 계열</label>
+              <textarea class="field-textarea" id="message" name="message" placeholder="원하시는 향 계열(우디, 플로럴 등)이나 문의 내용을 남겨주세요."></textarea>
+            </div>
+
+            <label class="field-check">
+              <input type="checkbox" name="agree" required>
+              <span>상담을 위한 개인정보(성함, 연락처) 수집·이용에 동의합니다.</span>
+            </label>
+
+            <button class="btn btn-primary btn-block" type="submit">제출하기</button>
+          </form>
+
+          <aside class="card guide-card" aria-labelledby="guide-title">
+            <h2 class="guide-title" id="guide-title">전화로 바로 문의</h2>
+            <p class="guide-tel">1588-0000</p>
+            <p class="guide-sub">오전 9시 10분 ~ 오후 4시 40분</p>
+            <ul class="guide-steps">
+              <li>양식을 남겨주시면 영업일 기준 1일 이내에 연락드립니다.</li>
+              <li>시향 키트는 신청 후 3~5일 안에 배송됩니다.</li>
+              <li>쇼룸 방문은 사전 예약 시 더 편하게 상담받을 수 있어요.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">PERFUMERY</p>
+      <address>
+        대구광역시 동구 신서동<br>
+        고객센터 1588-0000 · 오전 9시 10분 ~ 오후 4시 40분
+      </address>
+      <p class="copyright">© 2026 Perfume Curation Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

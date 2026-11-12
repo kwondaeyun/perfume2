@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="퍼퓸 쇼룸 위치, 영업시간, 전화번호 안내">
+  <title>오시는 길 | PERFUMERY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <!-- 1. 공통 꾸밈 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 2. 이 페이지 꾸밈 -->
+  <link rel="stylesheet" href="css/location.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="index.html" aria-label="PERFUMERY 홈으로">PERFUMERY</a>
+
+      <!-- 휴대폰 ☰ 버튼 : 체크박스 + label (자바스크립트 없이 동작) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="메뉴 열고 닫기">
+      <label for="menu-toggle" class="hamburger-btn" aria-hidden="true"></label>
+
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">홈</a></li>
+          <li><a class="nav-link" href="menu.html">컬렉션</a></li>
+          <li><a class="nav-link" href="about.html">브랜드·시향</a></li>
+          <li><a class="nav-link" href="location.html" aria-current="page">오시는 길</a></li>
+          <li><a class="nav-link" href="contact.html">시향·문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="loc-title">
+      <div class="container">
+        <div class="page-head">
+          <p class="eyebrow">Visit Us</p>
+          <h1 class="page-title" id="loc-title">오프라인 쇼룸 오시는 길</h1>
+          <p class="page-desc">방문 전 영업시간과 오시는 길을 확인해 주세요.</p>
+        </div>
+
+        <figure class="map-box">
+          <img src="images/map.png" alt="영진직업전문학교 주변 지도, 쇼룸 위치가 핀으로 표시되어 있음">
+          <a class="map-link" href="https://map.naver.com/p/search/영진직업전문학교" target="_blank" rel="noopener">네이버 지도에서 크게 보기 ↗</a>
+        </figure>
+
+        <ul class="place-grid">
+          <li class="card place-card">
+            <h2 class="place-label">주소</h2>
+            <address class="place-text">대구광역시 동구 영진직업전문학교</address>
+          </li>
+          <li class="card place-card">
+            <h2 class="place-label">영업시간</h2>
+            <p class="place-text">오전 9시 10분 ~ 오후 4시 40분</p>
+          </li>
+          <li class="card place-card">
+            <h2 class="place-label">전화 문의</h2>
+            <p class="place-text">1588-0000</p>
+            <p class="place-sub">방문 전 전화 예약을 권장드립니다.</p>
+          </li>
+        </ul>
+
+        <p class="place-cta"><a class="btn btn-primary" href="contact.html">방문 예약하기</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">PERFUMERY</p>
+      <address>
+        대구광역시 동구 신서동<br>
+        고객센터 1588-0000 · 오전 9시 10분 ~ 오후 4시 40분
+      </address>
+      <p class="copyright">© 2026 Perfume Curation Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

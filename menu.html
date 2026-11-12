@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="시트러스, 플로럴, 우디, 앰버, 아쿠아틱, 그린, 스파이시, 머스크, 구르망, 레더 10가지 향 계열 컬렉션">
+  <title>컬렉션 | PERFUMERY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap">
+  <!-- 1. 공통 꾸밈 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 2. 이 페이지 꾸밈 -->
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="logo" href="index.html" aria-label="PERFUMERY 홈으로">PERFUMERY</a>
+
+      <!-- 휴대폰 ☰ 버튼 : 체크박스 + label (자바스크립트 없이 동작) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="메뉴 열고 닫기">
+      <label for="menu-toggle" class="hamburger-btn" aria-hidden="true"></label>
+
+      <nav class="nav-menu" aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">홈</a></li>
+          <li><a class="nav-link" href="menu.html" aria-current="page">컬렉션</a></li>
+          <li><a class="nav-link" href="about.html">브랜드·시향</a></li>
+          <li><a class="nav-link" href="location.html">오시는 길</a></li>
+          <li><a class="nav-link" href="contact.html">시향·문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="menu-title">
+      <div class="container">
+        <div class="page-head">
+          <p class="eyebrow">Collection</p>
+          <h1 class="page-title" id="menu-title">컬렉션</h1>
+          <p class="page-desc">10가지 향 계열로 만나는 퍼퓸 컬렉션입니다. 사진을 누르면 해당 계열의 향수를 모아 볼 수 있어요.</p>
+        </div>
+
+        <ul class="category-grid">
+        <li>
+          <article class="card category-card cat-citrus">
+            <figure class="category-media">
+              <a href="collection/citrus.html">
+                <img src="images/perfume_03.jpg" alt="시트러스 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Citrus</p>
+              <h2 class="category-name">시트러스</h2>
+              <p class="category-desc">상큼하고 청량한 감귤 향</p>
+              <a class="category-more" href="collection/citrus.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-floral">
+            <figure class="category-media">
+              <a href="collection/floral.html">
+                <img src="images/perfume_02.jpg" alt="플로럴 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Floral</p>
+              <h2 class="category-name">플로럴</h2>
+              <p class="category-desc">화사하고 우아한 꽃향기</p>
+              <a class="category-more" href="collection/floral.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-woody">
+            <figure class="category-media">
+              <a href="collection/woody.html">
+                <img src="images/perfume_01.jpg" alt="우디 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Woody</p>
+              <h2 class="category-name">우디</h2>
+              <p class="category-desc">차분하고 포근한 나무 향</p>
+              <a class="category-more" href="collection/woody.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-amber">
+            <figure class="category-media">
+              <a href="collection/amber.html">
+                <img src="images/perfume_06.jpg" alt="앰버 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Amber</p>
+              <h2 class="category-name">앰버</h2>
+              <p class="category-desc">따뜻하고 깊은 호박빛 향</p>
+              <a class="category-more" href="collection/amber.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-aquatic">
+            <figure class="category-media">
+              <a href="collection/aquatic.html">
+                <img src="images/perfume_07.jpg" alt="아쿠아틱 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Aquatic</p>
+              <h2 class="category-name">아쿠아틱</h2>
+              <p class="category-desc">시원한 바다와 물의 향</p>
+              <a class="category-more" href="collection/aquatic.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-green">
+            <figure class="category-media">
+              <a href="collection/green.html">
+                <img src="images/perfume_08.jpg" alt="그린 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Green</p>
+              <h2 class="category-name">그린</h2>
+              <p class="category-desc">싱그러운 풀잎과 허브 향</p>
+              <a class="category-more" href="collection/green.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-spicy">
+            <figure class="category-media">
+              <a href="collection/spicy.html">
+                <img src="images/perfume_09.jpg" alt="스파이시 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Spicy</p>
+              <h2 class="category-name">스파이시</h2>
+              <p class="category-desc">톡 쏘는 따뜻한 향신료 향</p>
+              <a class="category-more" href="collection/spicy.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-musk">
+            <figure class="category-media">
+              <a href="collection/musk.html">
+                <img src="images/perfume_05.jpg" alt="머스크 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Musk</p>
+              <h2 class="category-name">머스크</h2>
+              <p class="category-desc">살결처럼 부드러운 향</p>
+              <a class="category-more" href="collection/musk.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-gourmand">
+            <figure class="category-media">
+              <a href="collection/gourmand.html">
+                <img src="images/perfume_04.jpg" alt="구르망 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Gourmand</p>
+              <h2 class="category-name">구르망</h2>
+              <p class="category-desc">달콤한 바닐라와 디저트 향</p>
+              <a class="category-more" href="collection/gourmand.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card category-card cat-leather">
+            <figure class="category-media">
+              <a href="collection/leather.html">
+                <img src="images/perfume_10.jpg" alt="레더 계열 대표 향수" loading="lazy">
+              </a>
+            </figure>
+            <div class="category-body">
+              <p class="category-en">Leather</p>
+              <h2 class="category-name">레더</h2>
+              <p class="category-desc">고급스럽고 중후한 가죽 향</p>
+              <a class="category-more" href="collection/leather.html">향수 보기 →</a>
+            </div>
+          </article>
+        </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">PERFUMERY</p>
+      <address>
+        대구광역시 동구 신서동<br>
+        고객센터 1588-0000 · 오전 9시 10분 ~ 오후 4시 40분
+      </address>
+      <p class="copyright">© 2026 Perfume Curation Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
